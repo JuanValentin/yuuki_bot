@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const config = require('../../config/config.json');
+//const config = require('../../config/config.json');
 const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
 module.exports= client =>{
     //conectar
