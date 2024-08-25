@@ -1,19 +1,6 @@
 require('dotenv').config();
 
-const express = require('express');
-const app = express();
-const PORT = 4000;
-
-app.get('/', (req, res) => {
-    res.send('Bot is running!');
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
 const Discord = require('discord.js');
-//const config = require('./config/config.json');
 const token = process.env.DISCORD_TOKEN;
 const prefix = process.env.PREFIX;
 
