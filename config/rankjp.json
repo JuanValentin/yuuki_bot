@@ -3210,6 +3210,39 @@
             "rank_1_desc": "Rank sugerido en el meta actual.",
             "rank_2": "",
             "rank_2_desc": ""
+        }, {
+            "id": "270",
+            "name": "Nevia",
+            "color":"#f7b05a",
+            "ue_lvl": "",
+            "ue_desc":"",
+            "restriccion": "Ninguna",
+            "rank_1": "__**30-6**__",
+            "rank_1_desc": "Rank sugerido en el meta actual.",
+            "rank_2": "",
+            "rank_2_desc": ""
+        }, {
+            "id": "271",
+            "name": "Homare (Summer)",
+            "color":"#f7b05a",
+            "ue_lvl": "",
+            "ue_desc":"",
+            "restriccion": "Ninguna",
+            "rank_1": "__**30-6**__",
+            "rank_1_desc": "Rank sugerido en el meta actual.",
+            "rank_2": "",
+            "rank_2_desc": ""
+        }, {
+            "id": "272",
+            "name": "Shefi (Princess Form)",
+            "color":"#f7b05a",
+            "ue_lvl": "",
+            "ue_desc":"",
+            "restriccion": "Ninguna",
+            "rank_1": "__**30-6**__",
+            "rank_1_desc": "Rank sugerido en el meta actual.",
+            "rank_2": "",
+            "rank_2_desc": ""
         }
 
 
