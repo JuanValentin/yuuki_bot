@@ -20,13 +20,15 @@ module.exports = {
             if (data != undefined) {
                 let data = res.data.obj;
                 let valorBuscado = data.id_unidad;
-                const resultadojp = libraryjp.waifus.find(persona => persona.id === valorBuscado)
+                //const resultadojp = libraryjp.waifus.find(persona => persona.id === valorBuscado)
                 //console.log(data);
-                if (resultadojp != undefined) {
-                    Embed.setTitle("__**RANKS RECOMENDADOS**__")
+
+
+
+                Embed.setTitle("__**RANKS RECOMENDADOS**__")
                         .setAuthor({ name: 'Yuuki Bot', iconURL: 'https://cdn.discordapp.com/attachments/995446875538853918/1000161685966946384/icon_unit_100011.png', url: 'https://www.priconne.helperplay.com' })
-                        .setDescription("Estas son las recomendaciones generales de " + resultadojp.name + "\nRecuerden que todos personajes comunmente se suben a 5.")
-                        .setColor(resultadojp.color.trim())
+                        .setDescription("Estas son las recomendaciones generales de " + data.unidad + " (" + data.version + ") "+ "\nRecuerden que todos personajes comunmente se suben a 5.")
+                        .setColor("#f7b05a")
 
                     let value_ue = "Desde lvl 30 a Lvl Max";
                     if (data.is_ue == "SI") {
@@ -44,19 +46,19 @@ module.exports = {
                         Embed.addFields([{ name: "UE 2 lvl recomendado: 5 ⭐", value: "Recomendado para ella por la gran cantidad de stats ganados"},])
                     }                   
 
+                    /*
                     if (resultadojp.rank_1 == "" && resultadojp.rank_2 == "") {
                         Embed.addFields([
                             { name: "O:", value: resultadojp.restriccion },
                         ])
                     }
+                    */
 
                     Embed.addFields([
-                        //{ name: "Restriccion:", value: "__**30-3**__" },
                         { name: "Rank: __**33-6**__" , value:"Rank sugerido en el meta actual" }
                     ])
 
                     Embed.addFields([
-                       // { name: "Restriccion:", value: "__**29-6**__" },
                         { name: "Rank:  __**34-3**__", value: "Segunda Opcion posible." }
                     ])
                 
@@ -73,23 +75,7 @@ module.exports = {
                         .setFooter({ text: 'Ranks recomendados', iconURL: 'https://cdn.discordapp.com/attachments/995446875538853918/1000161685966946384/icon_unit_100011.png' });
 
                     return message.channel.send({ embeds: [Embed] })
-                } else {
-                    Embed.setAuthor({ name: 'Yuuki Bot', iconURL: 'https://cdn.discordapp.com/attachments/995446875538853918/1000161685966946384/icon_unit_100011.png', url: 'https://www.priconne.helperplay.com' })
-                        .addFields([{ name: "Rangos", value: "Parece que ella aun no tiene ranking establecido, recomendamos esperar la valoracion final.", inline: true },])
-                        .setThumbnail(data.img_victory)
-                        .setColor(resultadojp.color.trim())
-                        .setTimestamp()
-                    if (data.galeria.length > 0) {
-                        const randomElement = data.galeria[Math.floor(Math.random() * data.galeria.length)];
-                        Embed.setImage(randomElement.src)
-                    } else {
-                        Embed.setImage(data.img_card)
-                    }
-                    Embed.setTimestamp()
-                        .setFooter({ text: 'Ranks recomendados', iconURL: 'https://cdn.discordapp.com/attachments/995446875538853918/1000161685966946384/icon_unit_100011.png' });
-                    return message.channel.send({ embeds: [Embed] })
-                }
-
+             
             } else {
                 Embed.setAuthor({ name: 'Yuuki Bot', iconURL: 'https://cdn.discordapp.com/attachments/995446875538853918/1000161685966946384/icon_unit_100011.png', url: 'https://www.priconne.helperplay.com' })
                     .setDescription("Error inesperado, el personaje que deseas buscar no existe o aun no se encuentra disponible en Helper Play")
@@ -102,9 +88,7 @@ module.exports = {
         const personaje = args[0];
         const version = args[1];
         if (personaje == 'besto' && version == 'waifu') {
-
-            return message.channel.send("tu sabes quien  es la besto waifu");
-
+            return message.channel.send("tu sabes quien es la besto waifu");
         } else if (!personaje) {
 
             let nobusqueda = new Discord.EmbedBuilder()
