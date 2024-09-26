@@ -55,7 +55,7 @@ module.exports = {
                     */
 
                     Embed.addFields([
-                        { name: "Rank: __**33-6**__" , value:"Rank sugerido en el meta actual" }
+                        { name: "Rank: __**34-4**__" , value:"Rank sugerido en el meta actual" }
                     ])
 
                     Embed.addFields([
